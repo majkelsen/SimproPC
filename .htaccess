@@ -1,0 +1,20 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule nasz-profil index.html
+RewriteRule zamow-pc builds.html
+RewriteRule zamow-komputer-bazowy compBase.php
+RewriteRule zamow-komputer-z-chlodzeniem-ciecza compCustom.php
+RewriteRule zamow-chlodzenie-ciecza compLiquid.php
+RewriteRule uslugi services.html
+RewriteRule dostawa-zamowien serviceDelivery.html
+RewriteRule kontakt contact.php
+RewriteRule RODO RODO.html
+
+RewriteCond %{HTTPS} !=on [NC]
+RewriteCond %{HTTP_HOST} !^www.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
