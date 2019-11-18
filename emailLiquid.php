@@ -42,8 +42,8 @@ if (!empty($_POST['submit'])) {
     $cableMod = htmlspecialchars(trim($_POST['cableMod']));
     $coolingMessage = htmlspecialchars(trim($_POST['coolingMessage'])); 
 
-    $transferCode =  htmlspecialchars(trim($_POST['transferCode']));
-    $transferDate =  htmlspecialchars(trim($_POST['transferDate']));
+    // $transferCode =  htmlspecialchars(trim($_POST['transferCode']));
+    // $transferDate =  htmlspecialchars(trim($_POST['transferDate']));
 
     $rodoCheck = ($_POST['rodoCheck']);
     $returnCheck = ($_POST['returnCheck']);
@@ -101,8 +101,7 @@ if (!empty($_POST['submit'])) {
             header('Location: zamow-chlodzenie-ciecza');
         }
      
-    // checkConponents check
-        if (isset($_POST['checkConponents'])){
+    // components check
             if (strlen($processor) > 40){
                 $_SESSION['error'] = '<div class="error">Za długa treść RUBRYKI PROCESORA -max. 40 znaków </div>';
                 header('Location: zamow-chlodzenie-ciecza');
@@ -139,7 +138,6 @@ if (!empty($_POST['submit'])) {
                 $_SESSION['error'] = '<div class="error">Za długa treść UWAG DO SPRZĘTU - max. 1000 znaków </div>';
                 header('Location: zamow-chlodzenie-ciecza');
             }
-        }
        
     // cooling parts check
         if(($coolingProcessor)=="" && ($coolingGraphics)=="" && ($coolingRAM)=="" && ($coolingPowerSection)==""){
@@ -165,21 +163,21 @@ if (!empty($_POST['submit'])) {
         }
 
     // $transferCode check
-        if (empty($transferCode)){
-            $_SESSION['error'] = '<div class="error">Nie wypełniłeś pola z kodem z przelewu!</div>';
-            header('Location: zamow-chlodzenie-ciecza');
-        }
-        elseif (strlen($transferCode) < 8 || strlen($transferCode) > 8){
-            $_SESSION['error'] = '<div class="error">Kod musi zawierać dokładnie 8 znaków! </div>';
-            header('Location: zamow-chlodzenie-ciecza');
-        }   
+        // if (empty($transferCode)){
+        //     $_SESSION['error'] = '<div class="error">Nie wypełniłeś pola z kodem z przelewu!</div>';
+        //     header('Location: zamow-chlodzenie-ciecza');
+        // }
+        // elseif (strlen($transferCode) < 8 || strlen($transferCode) > 8){
+        //     $_SESSION['error'] = '<div class="error">Kod musi zawierać dokładnie 8 znaków! </div>';
+        //     header('Location: zamow-chlodzenie-ciecza');
+        // }   
         
     
      // $transferDate check
-        if (empty($transferDate)){
-            $_SESSION['error'] = '<div class="error">Nie wybrałeś daty przelewu!</div>';
-            header('Location: zamow-chlodzenie-ciecza');
-        }
+        // if (empty($transferDate)){
+        //     $_SESSION['error'] = '<div class="error">Nie wybrałeś daty przelewu!</div>';
+        //     header('Location: zamow-chlodzenie-ciecza');
+        // }
 
     // $rodoCheck check
         if (!isset($rodoCheck)){
@@ -246,7 +244,7 @@ if (!empty($_POST['submit'])) {
             $mailComponents ="PODZESPOŁY KOMPUTERA:<br> Procesor: $processor<br> Karta graficzna: $graphicCard<br> Obudowa: $case<br> Chłodzenie: $cooler<br> Dyski twarde: $hardDrive<br> Zasilacz: $powerSupply<br> Pamięć: $memory<br> Kolorystyka: $colour<br> Inne uwagi: $otherParts<br>";
 
             $mailText ="ZAPYTANIE OFERTOWE NA CHŁODZENIE CIECZĄ:<br> 
-            Kod przelewu: $transferCode<br> Data przelewu: $transferDate<br> Budżet na układ chłodzenia: $budget zł<br><br> 
+            Budżet na układ chłodzenia: $budget zł<br><br> 
             $mailComponents<br><br>
             UKŁAD CHŁODZENIA CIECZĄ:<br>
             Co będzie chłodzone: $coolingProcessor, $coolingGraphics, $coolingRAM, $coolingPowerSection<br>

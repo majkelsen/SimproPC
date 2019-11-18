@@ -14,11 +14,6 @@ if (!empty($_POST['submit'])) {
     $purpose =  htmlspecialchars(trim($_POST['purpose']));
     $message = htmlspecialchars(trim($_POST['message']));
     
-    if (isset($_POST['checkConponents'])){
-        $checkConponents = ($_POST['checkConponents']);
-    }
-
-    if (isset($_POST['checkConponents'])){
         $processor = htmlspecialchars(trim($_POST['processor']));
         $graphicCard = htmlspecialchars(trim($_POST['graphicCard']));
         $case = htmlspecialchars(trim($_POST['case']));
@@ -29,7 +24,7 @@ if (!empty($_POST['submit'])) {
         $colour = htmlspecialchars(trim($_POST['colour']));
         $leds = htmlspecialchars(trim($_POST['leds']));
         $otherParts = htmlspecialchars(trim($_POST['otherParts'])); 
-    }
+
     if (isset($_POST['coolingProcessor'])){
         $coolingProcessor = ($_POST['coolingProcessor']);
     } else $coolingProcessor = "";
@@ -50,8 +45,8 @@ if (!empty($_POST['submit'])) {
     $cableMod = htmlspecialchars(trim($_POST['cableMod']));
     $coolingMessage = htmlspecialchars(trim($_POST['coolingMessage'])); 
 
-    $transferCode =  htmlspecialchars(trim($_POST['transferCode']));
-    $transferDate =  htmlspecialchars(trim($_POST['transferDate']));
+    // $transferCode =  htmlspecialchars(trim($_POST['transferCode']));
+    // $transferDate =  htmlspecialchars(trim($_POST['transferDate']));
 
     $rodoCheck = ($_POST['rodoCheck']);
     $returnCheck = ($_POST['returnCheck']);
@@ -125,8 +120,7 @@ if (!empty($_POST['submit'])) {
             header('Location: zamow-komputer-z-chlodzeniem-ciecza');
         }
 
-    // checkConponents check
-        if (isset($_POST['checkConponents'])){
+    // components check
             if (strlen($processor) > 40){
                 $_SESSION['error'] = '<div class="error">Za długa treść RUBRYKI PROCSORA -max. 40 znaków </div>';
                 header('Location: zamow-komputer-z-chlodzeniem-ciecza');
@@ -167,8 +161,7 @@ if (!empty($_POST['submit'])) {
                 $_SESSION['error'] = '<div class="error">Za długa treść UWAG DO SPRZĘTU - max. 1000 znaków </div>';
                 header('Location: zamow-komputer-z-chlodzeniem-ciecza');
             }
-        }
-       
+            
     // cooling parts check
         if(($coolingProcessor)=="" && ($coolingGraphics)=="" && ($coolingRAM)=="" && ($coolingPowerSection)==""){
             $_SESSION['error'] = '<div class="error">Nie wybrano podzespołów chłodzenia wodnego! </div>';
@@ -193,21 +186,21 @@ if (!empty($_POST['submit'])) {
         }
 
     // $transferCode check
-        if (empty($transferCode)){
-            $_SESSION['error'] = '<div class="error">Nie wypełniłeś pola z kodem z przelewu!</div>';
-            header('Location: zamow-komputer-z-chlodzeniem-ciecza');
-        }
-        elseif (strlen($transferCode) < 8 || strlen($transferCode) > 8){
-            $_SESSION['error'] = '<div class="error">Kod musi zawierać dokładnie 8 znaków! </div>';
-            header('Location: zamow-komputer-z-chlodzeniem-ciecza');
-        }   
+        // if (empty($transferCode)){
+        //     $_SESSION['error'] = '<div class="error">Nie wypełniłeś pola z kodem z przelewu!</div>';
+        //     header('Location: zamow-komputer-z-chlodzeniem-ciecza');
+        // }
+        // elseif (strlen($transferCode) < 8 || strlen($transferCode) > 8){
+        //     $_SESSION['error'] = '<div class="error">Kod musi zawierać dokładnie 8 znaków! </div>';
+        //     header('Location: zamow-komputer-z-chlodzeniem-ciecza');
+        // }   
         
     
      // $transferDate check
-        if (empty($transferDate)){
-            $_SESSION['error'] = '<div class="error">Nie wybrałeś daty przelewu!</div>';
-            header('Location: zamow-komputer-z-chlodzeniem-ciecza');
-        }
+        // if (empty($transferDate)){
+        //     $_SESSION['error'] = '<div class="error">Nie wybrałeś daty przelewu!</div>';
+        //     header('Location: zamow-komputer-z-chlodzeniem-ciecza');
+        // }
 
     // $rodoCheck check
         if (!isset($rodoCheck)){
@@ -244,19 +237,17 @@ if (!empty($_POST['submit'])) {
         {$_SESSION['f_budget'] = $budget;}
         {$_SESSION['f_purpose'] = $purpose;}
         {$_SESSION['f_message'] = $message;}
-
-        if (isset($_POST['checkConponents'])){
-            {$_SESSION['f_processor'] = $processor;}
-            {$_SESSION['f_graphicCard'] = $graphicCard;}
-            {$_SESSION['f_case'] = $case;}
-            {$_SESSION['f_cooler'] = $cooler;}
-            {$_SESSION['f_hardDrive'] = $hardDrive;}
-            {$_SESSION['f_powerSupply'] = $powerSupply;}
-            {$_SESSION['f_memory'] = $memory;}
-            {$_SESSION['f_colour'] = $colour;}
-            {$_SESSION['f_leds'] = $leds;}
-            {$_SESSION['f_otherParts'] = $otherParts;}
-        }
+ 
+        {$_SESSION['f_processor'] = $processor;}
+        {$_SESSION['f_graphicCard'] = $graphicCard;}
+        {$_SESSION['f_case'] = $case;}
+        {$_SESSION['f_cooler'] = $cooler;}
+        {$_SESSION['f_hardDrive'] = $hardDrive;}
+        {$_SESSION['f_powerSupply'] = $powerSupply;}
+        {$_SESSION['f_memory'] = $memory;}
+        {$_SESSION['f_colour'] = $colour;}
+        {$_SESSION['f_leds'] = $leds;}
+        {$_SESSION['f_otherParts'] = $otherParts;}
 
         {$_SESSION['f_coolingProcessor'] = $coolingProcessor;}
         {$_SESSION['f_coolingGraphics'] = $coolingGraphics;}
@@ -275,11 +266,9 @@ if (!empty($_POST['submit'])) {
         if (empty($_SESSION['error'])){
             $mailSender = "Zapytanie przysłał: $name";
             $mailContact = "Email zwrotny: $email<br> Telefon: $phone";
-            if (isset($_POST['checkConponents'])){
                 $mailComponents =" Procesor: $processor<br> Karta graficzna: $graphicCard<br> Obudowa: $case<br> Chłodzenie: $cooler<br> Dyski twarde: $hardDrive<br> Zasilacz: $powerSupply<br> Pamięć: $memory<br><br> Kolorystyka: $colour<br> LED'y: $leds<br><br> Inne uwagi: $otherParts<br>";
-            }
             $mailText ="ZAPYTANIE OFERTOWE O KOMPUTER Z CHŁODZENIEM CIECZĄ:<br> 
-            Kod przelewu: $transferCode<br> Data przelewu: $transferDate<br> Przeznaczenie: $purpose<br> Budżet: $budget zł<br> Dodatkowe informacje: $message<br><br>
+            Przeznaczenie: $purpose<br> Budżet: $budget zł<br> Dodatkowe informacje: $message<br><br>
             $mailComponents<br><br>
             CHŁODZENIE CIECZĄ:<br>
             Co będzie chłodzone: $coolingProcessor, $coolingGraphics, $coolingRAM, $coolingPowerSection<br>

@@ -42,12 +42,13 @@
                     <h3>NIP: 734-355-29-61</h3>
                     <br>
 
-                    punkty firmowe:<br>
-                    <h4>Kraków (30-716)</h4>
-                    ul. Przewóz 31<br><br>
-                
+                    punkty firmowe:<br><br>
+            
                     <h4>Nowy Sącz (33-300)</h4>
-                    ul. Falkowska 88a<br>
+                    ul. Falkowska 88a<br><br>
+
+                    <h4>Kraków (30-718)</h4>
+                    ul. Myśliwska<br>
 
                     <h2 class="media directButton"><a href="RODO">RODO</a></h2>
                 </span>

@@ -616,11 +616,11 @@ input[type=checkbox] {
 
 /* // */
 
-.showComponents {
+/* .showComponents {
   display: none;
   opacity: 0;
   transition: all .5s ease;
-}
+} */
 
 .addDisplay {
   display: block;

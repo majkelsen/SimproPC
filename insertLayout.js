@@ -4,7 +4,7 @@ pageLayout = `<div class="container">
 <div class="menu">
   <div class="mainmenu">
     <p id="menuYT"><a href="nasz-profil">Nasz profil</a></p>
-    <p id="menuBuilds"><a href="zamow-pc">Zamów PC</a></p>
+    <p id="menuBuilds"><a href="twoj-pc">Zamów twój PC</a></p>
     <p id="menuServices"><a href="uslugi">Usługi</a></p>
     <p id="menuContact"><a href="kontakt">Kontakt</a></p>
   </div>
@@ -30,9 +30,9 @@ pageLayout = `<div class="container">
   <div class="sidelist"></div>
   <p id="close"> <i class="fas fa-angle-double-left"></i></p>
   <p class="sidemain" id="menuYT"><a href="nasz-profil">Nasz profil</a></p>
-  <p class="sidemain" id="menuBuilds"><a href="zamow-pc">Zamów PC</a></p>
-  <p class="sidesecond" id="compBase"><a href="zamow-komputer-bazowy">Komputer bazowy</a></p>
-  <p class="sidesecond" id="compCustom"><a href="zamow-komputer-z-chlodzeniem-ciecza">Komputer modyfikowany</a></p>
+  <p class="sidemain" id="menuBuilds"><a href="twoj-pc">Zamów twój PC</a></p>
+  <p class="sidesecond" id="compBase"><a href="zamow-komputer-bazowy">pc bazowy</a></p>
+  <p class="sidesecond" id="compCustom"><a href="zamow-komputer-z-chlodzeniem-ciecza">pc modyfikowany</a></p>
   <p class="sidesecond" id="compLiquid"><a href="zamow-chlodzenie-ciecza">Chłodzenie cieczą</a></p>
   <p class="sidemain" id="menuServices"><a href="uslugi">Usługi</a></p>
   <p class="sidesecond" id="serviceDelivery"><a href="dostawa-zamowien">Dostawa</a></p>

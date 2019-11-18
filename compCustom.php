@@ -21,7 +21,7 @@
 <body>
     <div class="content">
         <div class="compCustom">
-            <h1>złóż zamówienie na wycenę komputera z chłodzeniem cieczą</h1>
+            <h1>złóż zapytanie na wycenę komputera z chłodzeniem cieczą</h1>
             <h4 class="center">Dokładne instrukcje uzupełnienia formularza, znajdują się zaraz pod nim.</h4>
             <div class="formBuilds Base">
                 <form class="myform" method="POST" action="emailCustom.php">
@@ -74,12 +74,12 @@
                     </div>
 
 
-                    <div class="formText">Czy masz jakieś wybrane komponenty?
+                    <!-- <div class="formText">Czy masz jakieś wybrane komponenty?
                         <div class="checkboxFIRST checkboxComponents">
-                            <input type="checkbox" id="checkboxComponents" name="checkConponents" />
+                            <input type="checkbox" id="checkboxComponents" name="checkComponents" />
                             <label for="checkboxComponents"></label>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="showComponents ">
                         <div class="formElement">
@@ -204,7 +204,7 @@
                         </div> 
                     </div>
 
-                    <div class="formText">Wariant wartości układu chłodzenia:</div>
+                    <div class="formText">Wariant cenowy układu chłodzenia:</div>
                     <div class="pricingContainer">
                         
                         <div class="coolingOption">
@@ -261,7 +261,7 @@
 
                     <div class="formLine"></div>
 
-                    <div class="formElement">
+                    <!-- <div class="formElement">
                         <label for="transferCode"><i class="fas fa-edit"></i> Kod z przelewu</label>
                         <input type="text" id="transferCode" name="transferCode" placeholder="Podaj 8-znakowy kod..">
                     </div>
@@ -269,7 +269,7 @@
                     <div class="formElement">
                         <label for="transferDate"><i class="fas fa-edit"></i> Data przelewu</label>
                         <input type="date" id="transferDate" name="transferDate">
-                    </div>
+                    </div> -->
 
                     <div class="rodoCheck clearfix">
                         <div class="checkboxSECOND">
@@ -314,35 +314,26 @@
             <div class="secondParagraph">b) Podaj budżet który planujesz wydać na swój PC. Budżet ten ma dotyczyć wyłącznie podzespołów bazowych, cena chłodzenia cieczą zostanie wyliczona na podstawie podanych parametrów.</div>
             <div class="secondParagraph">c) Napisz do czego będzie służyć Ci komputer, ma to duże znaczenie przy doborze odpowiednich komponentów.</div>
             <div class="secondParagraph">d) Dopisz istotne dla Ciebie informacje, które dotyczyły by zamówienia.</div>
-            <div class="secondParagraph">e) Jeżeli masz jakieś swoje wybrane komponenty, po zmianie checkboxu "Czy masz jakieś wybrane komponenty?" na TAK, wpisz je do odpowiednich rubryk.</div>
+            <div class="secondParagraph">e) Wypisz dokładnie swoje wybrane komponenty, do odpowiadających im rubryk.</div>
             <div class="secondParagraph">f) Wybierz konkretne podzespoły, które chciałbyś zmodyfikować na chłodzenie cieczą.</div>
             <div class="secondParagraph">g) Wybierz rodzaj rurek którymi łączone będą elementy układu chłodzenia cieczą.</div>
-            <div class="secondParagraph">h) Wybierz wariant wartościowy układu chłodzenia cieczą.</div>
+            <div class="secondParagraph">h) Wybierz wariant cenowy układu chłodzenia cieczą.</div>
             <div class="secondParagraph">i) Opcjonalnie podaj wybrany kolor cieczy, modyfikacje kabli oraz dodatkowe uwagi odnośnie układu chłodzenia cieczą.</div>
-            <div class="secondParagraph">j) Dokonaj opłaty 35zł na nasze konto firmowe DOKŁADNIE według wytycznych zamieszczonych poniżej. A następnie podaj 8-znakowy kod i datę przelewu do odpowiednich rubryk w formularzu.</div>
-            <div class="secondParagraph">k) Zaakceptuj podane we formularzu zgody.</div>
-            <div class="secondParagraph">l) Potwierdź re-captche.</div>
-            <div class="secondParagraph">m) Kliknij przycisk WYŚLIJ, jeżeli wszystkie dane były poprawne, wyświetli się adnotacja potwierdzająca wysyłkę.</div><br>
+            <div class="secondParagraph">j) Zaakceptuj podane we formularzu zgody.</div>
+            <div class="secondParagraph">k) Potwierdź re-captche.</div>
+            <div class="secondParagraph">l) Kliknij przycisk WYŚLIJ, jeżeli wszystkie dane były poprawne, wyświetli się adnotacja potwierdzająca wysyłkę.</div><br>
             
-            <div class="firstParagraph">2. W między czasie zapoznaj się z <a href="serviceDelivery.html">formami Dostawy sprzętu</a>, aby w następnych krokach poinformować nas o wybranej opcji.</div><br>
+            <div class="firstParagraph">2. Zapoznaj się z <a href="serviceDelivery.html">formami Dostawy sprzętu</a>, aby w następnych krokach poinformować nas o wybranej opcji.</div><br>
 
             <div class="firstParagraph">3. Po otrzymaniu wiadomości z danymi przekazanymi w formularzu, w okresie około 2-ch dni zostanie przygotowana wycena i wysłana na podany adres e-mail. Zawiera ona dokładną specyfikacje komputera, oraz możliwy termin realizacji.</div><br>
 
             <div class="firstParagraph">4. Po otrzymaniu wyceny ze specyfikacją:</div>
             <div class="secondParagraph">a) Jeżeli wszystko jest zgodne z Twoimi oczekiwaniami, akceptujesz jej warunki i wysyłasz do nas zwrotną informację potwierdzającą. Poinformuj nas także o wybranej formie dostawy gotowego sprzętu. </div>
-            <div class="secondParagraph">b) W razie chęci dokonania zmian w specyfikacji, skonsultuj je mailowo.</div>
-            <div class="secondParagraph">c) W razie braku odpowiedzi do 14-dni, zamówienie traci swoją moc, a na podany email zostaje wysłany rachunek za wykonanie wyceny, na wpłaconą już kwotę 35 zł BRUTTO!</div><br>
+            <div class="secondParagraph">b) W razie chęci dokonania zmian w specyfikacji, skonsultuj je mailowo.</div><br>
             
             <div class="firstParagraph">5. Po akceptacji wyceny ze specyfikacją, wystawiamy Fakturę Pro-Forma. Następnie dokonujesz opłaty kwoty podanej na otrzymanej fakturze. Jak tylko pieniądze pojawią się na naszym koncie firmowym, rozpoczynamy procedurę kompletowania zamówienia.</div><br>
 
             <div class="firstParagraph">6. Gdy całe zamówienie jest złożone i gotowe do przekazania, informujemy Cię o tym e-mailowo. Równocześnie nastąpi realizacja dostawy zgodnie z wcześniejszymi ustaleniami. Finalna faktura zostanie dołączona do przesyłki.</div><br>
-
-            <h3 class="center">Wytyczne wykonania przelewu:</h3>
-            <div class="firstParagraph">Aby zamówienie wyceny było respektowane, musi zawierać dane przelewu znane tylko wyłącznie wysyłającemu go. Tak więc należy dokonać opłaty w wysokości <i class="extra">35 zł</i> na konto bankowe:</div>
-            <div class="secondParagraph">Numer konta bankowego: <i class="extra">57 1140 2004 0000 3802 7857 9550</i> </div>
-            <div class="secondParagraph">Odbiorca: <i class="extra">SIMPRO Michał Magiera</i></div>
-            <div class="firstParagraph">W tytule KONIECZNIE umieścić należy wybrany przez siebie, dokładnie <i class="extra">8-znakowy kod</i>, który następnie podać należy w uzupełnianym formularzu.</div>
-            <div class="firstParagraph">W przypadku decyzji o realizacji u nas zamówienia, wycena jest <i class="extra">DARMOWA</i>. Kwota za nią zapłacona jest traktowana wtedy jako zaliczka na rzecz finalnej faktury, która będzie pomniejszona o tę wartość.</div>
  
             </span>
 

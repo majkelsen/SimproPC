@@ -6,7 +6,7 @@ Deny from all
 
 RewriteEngine on
 RewriteRule nasz-profil index.html
-RewriteRule zamow-pc builds.html
+RewriteRule twoj-pc builds.html
 RewriteRule zamow-komputer-bazowy compBase.php
 RewriteRule zamow-komputer-z-chlodzeniem-ciecza compCustom.php
 RewriteRule zamow-chlodzenie-ciecza compLiquid.php

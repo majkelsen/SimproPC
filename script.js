@@ -169,11 +169,11 @@ function smoothscroll() {
 
 
 // SKRYPT DO FORMULARZA
-const checkboxComponents = document.querySelector(".checkboxComponents label");
-const showComponents = document.querySelector(".showComponents");
+// const checkboxComponents = document.querySelector(".checkboxComponents label");
+// const showComponents = document.querySelector(".showComponents");
 
-if (checkboxComponents !== null) {
-  checkboxComponents.addEventListener("click", function () {
-    showComponents.classList.toggle("addDisplay");
-  });
-}
+// if (checkboxComponents !== null) {
+//   checkboxComponents.addEventListener("click", function () {
+//     showComponents.classList.toggle("addDisplay");
+//   });
+// }
